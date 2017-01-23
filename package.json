@@ -1,0 +1,55 @@
+{
+  "name": "eslint-config-report",
+  "version": "0.0.0",
+  "description": "generate eslint config report from \"eslint --print-config\".",
+  "homepage": "https://github.com/uk-taniyama/eslint-config-report",
+  "author": {
+    "name": "UK-taniyama",
+    "email": "uk.taniyama@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "bin": "lib/cli.js",
+  "keywords": [
+    "eslint",
+    "config",
+    "report"
+  ],
+  "dependencies": {
+    "eslint": "^3.14.0",
+    "lodash": "^4.17.4",
+    "optionator": "^0.8.2",
+    "promisify-node": "^0.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "6.9.0",
+    "babel-register": "^6.9.0",
+    "del": "^2.0.2",
+    "eslint": "^3.1.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-import": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "isparta": "^4.0.0"
+  },
+  "repository": "git@github.com:uk-taniyama/eslint-config-report.git",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT"
+}
