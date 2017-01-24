@@ -49,6 +49,7 @@
   "repository": "git@github.com:uk-taniyama/eslint-config-report.git",
   "scripts": {
     "prepublish": "gulp prepublish",
+    "build": "gulp babel",
     "test": "gulp"
   },
   "license": "MIT"
