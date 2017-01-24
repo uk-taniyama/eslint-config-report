@@ -1,3 +1,51 @@
-<%
+<style>
+body {
+  font-family: sans-serif;
+}
+table {
+  border-collapse: collapse;
+  text-align: left;
+}
+tr.error {
+  background-color: #ffcccc;
+}
+tr.warn {
+  background-color: #ffffcc;
+}
+th {
+  padding: 4px;
+  font-weight: bold;
+  vertical-align: top;
+  border: 1px solid #ccc;
+}
+td {
+  padding: 4px;
+  vertical-align: top;
+  border: 1px solid #ccc;
+}
+</style>
+<table><tr><th>globals</th><td>
+<%=
+  Object.keys(globals)
+    .filter((key) => globals[key])
+    .sort()
+    .join(', ')
 %>
-<%=aaa%>
+</td></tr></table>
+<table>
+  <tr><th>rule</th><th>severity</th><th>extra</th></tr>
+<%
+  Object.keys(rules)
+    .sort()
+    .forEach((key) => {
+      var value = rules[key];
+      var isArray = _.isArray(value);
+      var severity = isArray ? value[0] : value;
+      var extra = isArray ? value[1] : '';
+      extra = _.isObject(extra) ? JSON.stringify(extra, null, ' ') : extra;
+%>
+  <tr class=<%=severity%>><td><%=key%></td><td><%=severity%></td><td><%=extra%></td></tr>
+<%
+    })
+%>
+</table>
